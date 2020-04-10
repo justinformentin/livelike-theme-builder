@@ -1,17 +1,16 @@
 import React, { Fragment, useEffect, useState } from "react";
 import { Controls } from "./Controls";
 import { saveJSON, saveCSS } from "../lib/utils";
-import * as g from "../lib/globalControls";
 
-export function SidebarContents({ updateStyle }) {
+export function SidebarContents({ updateStyle, changeTab, tab, list }) {
   const [isDark, setIsDark] = useState(false);
   const [controlList, setControlList] = useState(null);
 
   useEffect(() => {
     const arr = [];
-    for (let item in g) arr.push(g[item]);
+    for (let item in list) arr.push(list[item]);
     setControlList(arr);
-  }, []);
+  }, [list]);
 
   const toggleTheme = () => {
     document.body.style.background = isDark ? "#fff" : "#222";
@@ -21,6 +20,14 @@ export function SidebarContents({ updateStyle }) {
   return (
     <div className="sidebar-container">
       <div className="sidebar-wrapper">
+        <div className="theme-container">
+          <button className={`save-button ${tab === 0 ? 'selected' : ''}`} onClick={()=>changeTab(0)}>
+            Widgets
+          </button>
+          <button className={`save-button ${tab === 1 ? 'selected' : ''}`} onClick={()=>changeTab(1)}>
+            Chat
+          </button>
+        </div>
         <div className="theme-container">
           <button className="save-button" onClick={toggleTheme}>
             {isDark ? "Light Theme" : "Dark Theme"}

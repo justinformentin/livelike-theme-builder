@@ -106,3 +106,18 @@ livelike-widgets {
 .universal-container {
   display: flex;
 }
+livelike-chat {
+  width: 75%;
+}
+.block{
+  display:block !important;
+}
+.flex {
+  display: flex !important;
+}
+.hidden {
+  display: none !important;
+}
+.selected {
+  background: #829dd8;
+}

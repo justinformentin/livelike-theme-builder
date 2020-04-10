@@ -1,4 +1,4 @@
-import * as g from "./globalControls";
+import * as g from "./globalWidgetControls";
 import * as w from "./widgetControls";
 
 var STYLE;

@@ -29,39 +29,24 @@ export default function App({ s }) {
     }
   }, [style]);
 
-  // const renderWidgets = () => (
-  //   <livelike-widgets programid="91ca9edd-376a-4d27-a24a-6b607c15c17c">
-  //     {list.map((v, idx) => (
-  //       <WidgetBlock key={idx} id={idx} item={v} updateStyle={setStyle} />
-  //     ))}
-  //   </livelike-widgets>
-  // );
+  const renderWidgets = () => (
+    <livelike-widgets programid="91ca9edd-376a-4d27-a24a-6b607c15c17c">
+      {list.map((v, idx) => (
+        <WidgetBlock key={idx} id={idx} item={v} updateStyle={setStyle} />
+      ))}
+    </livelike-widgets>
+  );
 
-  // const renderChat = () => (
-  //   <livelike-chat programid="91ca9edd-376a-4d27-a24a-6b607c15c17c"></livelike-chat>
-  // );
+  const renderChat = () => (
+      <livelike-chat
+        programid="91ca9edd-376a-4d27-a24a-6b607c15c17c"
+      ></livelike-chat>
+  );
 
   return (
     <div className="outer-container">
-      <SidebarContents
-        updateStyle={setStyle}
-        list={tab === 0 ? w : c}
-        changeTab={setTab}
-        tab={tab}
-      />
-      <livelike-widgets
-        class={tab === 0 ? "block" : "hidden"}
-        programid="91ca9edd-376a-4d27-a24a-6b607c15c17c"
-      >
-        {list.map((v, idx) => (
-          <WidgetBlock key={idx} id={idx} item={v} updateStyle={setStyle} />
-        ))}
-      </livelike-widgets>
-      <livelike-chat
-      timestamps
-        class={tab === 1 ? "flex" : "hidden"}
-        programid="91ca9edd-376a-4d27-a24a-6b607c15c17c"
-      ></livelike-chat>
+      <SidebarContents updateStyle={setStyle} list={tab=== 0 ? w : c} changeTab={setTab} tab={tab} />
+      {tab === 0 ? renderWidgets() : renderChat()}
     </div>
   );
 }
