@@ -56,7 +56,7 @@ export const buildCSSFile = () => {
     let val = `${v}:${STYLE[v]};`;
     STYLE[v] === "" ? (empty += val) : (str += val);
   }
-  return `body{${str}}\n/*${empty}*/`;
+  return `body{${str}\n/*${empty}*/}`;
 };
 
 export const saveCSS = () => saveToFile(buildCSSFile(), "livelikeStyles.css");
