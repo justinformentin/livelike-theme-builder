@@ -3,9 +3,9 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import "./index.css";
-import { getWidgetStyles } from "./lib/utils";
+import { getStyles } from "./lib/utils";
 
-getWidgetStyles();
+getStyles();
 const s = document.createElement("style");
 s.type = 'text/css'
 document.body.append(s);

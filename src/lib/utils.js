@@ -1,4 +1,5 @@
 import * as g from "./globalWidgetControls";
+import * as c from "./globalChatControls";
 import * as w from "./widgetControls";
 
 var STYLE;
@@ -34,10 +35,10 @@ var STYLE;
 //   --theme-alert-primary-color: "#9f041b"
 //   --theme-alert-secondary-color: "#f5515f"
 // }
-export const updateWidgetStyle = style => (STYLE[style.selector] = style.value);
+export const updateSavedStyle = style => (STYLE[style.selector] = style.value);
 
-export const getWidgetStyles = () => {
-  const defArrs = [w, g];
+export const getStyles = () => {
+  const defArrs = [w, g, c];
   const obj = {};
   defArrs.map(a => {
     for (let item in a) {

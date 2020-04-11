@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import WidgetBlock from "./components/WidgetBlock";
 import { SidebarContents } from "./components/SidebarContents";
-import { updateWidgetStyle } from "./lib/utils";
+import { updateSavedStyle } from "./lib/utils";
 import { list } from "./lib/list";
 import * as w from "./lib/globalWidgetControls";
 import * as c from "./lib/globalChatControls";
@@ -23,7 +23,7 @@ export default function App({ s }) {
     arr.map(v => (str += `${v.selector}:${v.value};`));
     s.innerText = `body{${str}}`;
     setState({ styleString: str, styleArr: arr });
-    updateWidgetStyle(style);
+    updateSavedStyle(style);
   };
 
   // const renderWidgets = () => (
