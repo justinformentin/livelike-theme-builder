@@ -84,7 +84,91 @@ export const input = {
       styleSelector: "--theme-input-icon-hover-color",
       defaultVal: "invert(1)",
       isColor: true
+    }
+  ]
+};
+
+export const message = {
+  name: "Message",
+  list: [
+    {
+      styleName: "Container Position",
+      styleSelector: "--theme-message-item-container-position",
+      defaultVal: "relative",
+      isColor: false
     },
+    {
+      styleName: "Container Margin",
+      styleSelector: "--theme-message-item-container-margin",
+      defaultVal: "0 0 0.5rem 0",
+      isColor: false
+    },
+    {
+      styleName: "Container Padding",
+      styleSelector: "--theme-message-item-container-padding",
+      defaultVal: "",
+      isColor: false
+    },
+    {
+      styleName: "Container Display",
+      styleSelector: "--theme-message-item-container-display",
+      defaultVal: "flex",
+      isColor: false
+    },
+    {
+      styleName: "Container Justify Content",
+      styleSelector: "--theme-message-item-container-justify-content",
+      defaultVal: "space-between",
+      isColor: false
+    },
+    {
+      styleName: "Color",
+      styleSelector: "--theme-message-color",
+      defaultVal: "inherit",
+      isColor: true
+    },
+    {
+      styleName: "Font Size",
+      styleSelector: "--theme-message-font-size",
+      defaultVal: "1rem",
+      isColor: false
+    },
+    {
+      styleName: "Font Family",
+      styleSelector: "--theme-sender-name-font-size",
+      defaultVal: "",
+      isColor: false
+    },
+    {
+      styleName: "Sender Name Color",
+      styleSelector: "--theme-sender-name-color",
+      defaultVal: "inherit",
+      isColor: true
+    },
+    {
+      styleName: "Sender Name Font Size",
+      styleSelector: "--theme-sender-name-font-size",
+      defaultVal: "1rem",
+      isColor: false
+    },
+    {
+      styleName: "Sender Name Font Family",
+      styleSelector: "--theme-sender-name-font-family",
+      defaultVal: "",
+      isColor: false
+    },
+    {
+      styleName: "Sender Name Margin",
+      styleSelector: "--theme-sender-name-margin",
+      defaultVal: " 0 0 0.25rem 0",
+      isColor: false
+    },
+    {
+      styleName: "Deleted Message Color",
+      styleSelector: "--theme-deleted-message-color",
+      defaultVal: "inherit",
+      isColor: true
+    }
   ]
 };
 
@@ -120,6 +204,42 @@ export const timestamp = {
       styleSelector: "--theme-message-timestamp-padding",
       defaultVal: "",
       isColor: false
+    }
+  ]
+};
+
+export const stickerDisplay = {
+  name: "Sticker Display",
+  list: [
+    {
+      styleName: "Icon Color",
+      styleSelector: "--theme-sticker-icon-color",
+      defaultVal: "#888",
+      isColor: true
     },
+    {
+      styleName: "Icon Hover Color",
+      styleSelector: "--theme-sticker-icon-hover-color",
+      defaultVal: "invert(1)",
+      isColor: true
+    },
+    {
+      styleName: "Icon Bottom",
+      styleSelector: "--theme-sticker-icon-bottom",
+      defaultVal: "0.8rem",
+      isColor: false
+    },
+    {
+      styleName: "Container Width",
+      styleSelector: "--theme-sticker-container-width",
+      defaultVal: "",
+      isColor: false
+    },
+    {
+      styleName: "Container Max Width",
+      styleSelector: "--theme-sticker-container-max-width",
+      defaultVal: "22rem",
+      isColor: false
+    }
   ]
 };
